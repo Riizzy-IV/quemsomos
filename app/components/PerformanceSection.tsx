@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
+import BlueBar from "@/app/components/BlueBar";
 
 const IMAGES = [
   "https://www.figma.com/api/mcp/asset/e232fd6d-7012-4b8c-badf-f67251e0ddfb",
@@ -9,40 +10,56 @@ const IMAGES = [
   "https://www.figma.com/api/mcp/asset/ca2dab62-78b6-4cc3-ba1b-218dc5681755",
 ];
 
-const IMG_H  = 400;
-const GAP    = 16;
-const PEEK   = 140;
-
-function BlueBar() {
-  return <div className="w-20 h-1.5 bg-sec-light rounded" />;
-}
+const IMG_H = 400;
+const GAP   = 16;
+const PEEK  = 140;
+const LERP  = 0.07; // suavidade: menor = mais suave/lento
 
 export default function PerformanceSection() {
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const stripRef   = useRef<HTMLDivElement>(null);
-  const rafRef     = useRef<number | null>(null);
+  const wrapperRef  = useRef<HTMLDivElement>(null);
+  const stripRef    = useRef<HTMLDivElement>(null);
+  const currentTY   = useRef(0);
+  const targetTY    = useRef(0);
+  const animIdRef   = useRef<number | null>(null);
   const [activeIdx, setActiveIdx] = useState(0);
+  const lastIdxRef  = useRef(0);
 
   useEffect(() => {
+    const maxTY = (IMAGES.length - 1) * (IMG_H + GAP);
+
+    // Atualiza apenas o target a cada scroll — sem DOM aqui
     const onScroll = () => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      rafRef.current = requestAnimationFrame(() => {
-        if (!wrapperRef.current) return;
-        const { top, height } = wrapperRef.current.getBoundingClientRect();
-        const scrollable = height - window.innerHeight;
-        if (scrollable <= 0) return;
-        const progress = Math.max(0, Math.min(1, -top / scrollable));
-        const maxTY = (IMAGES.length - 1) * (IMG_H + GAP);
-        const ty    = -progress * maxTY;
-        const idx   = Math.min(IMAGES.length - 1, Math.round(progress * (IMAGES.length - 1)));
-        if (stripRef.current) stripRef.current.style.transform = `translateY(${ty}px)`;
+      if (!wrapperRef.current) return;
+      const { top, height } = wrapperRef.current.getBoundingClientRect();
+      const scrollable = height - window.innerHeight;
+      if (scrollable <= 0) return;
+      const progress = Math.max(0, Math.min(1, -top / scrollable));
+      targetTY.current = -progress * maxTY;
+      const idx = Math.min(IMAGES.length - 1, Math.round(progress * (IMAGES.length - 1)));
+      if (idx !== lastIdxRef.current) {
+        lastIdxRef.current = idx;
         setActiveIdx(idx);
-      });
+      }
     };
+
+    // Loop de animação contínuo com lerp
+    const animate = () => {
+      const diff = targetTY.current - currentTY.current;
+      if (Math.abs(diff) > 0.01) {
+        currentTY.current += diff * LERP;
+        if (stripRef.current) {
+          stripRef.current.style.transform = `translateY(${currentTY.current}px)`;
+        }
+      }
+      animIdRef.current = requestAnimationFrame(animate);
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
+    animIdRef.current = requestAnimationFrame(animate);
+
     return () => {
       window.removeEventListener("scroll", onScroll);
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      if (animIdRef.current) cancelAnimationFrame(animIdRef.current);
     };
   }, []);
 
@@ -54,7 +71,6 @@ export default function PerformanceSection() {
         className="sticky top-0 h-screen flex items-center px-[120px] gap-20 overflow-hidden"
         style={{ background: "linear-gradient(to bottom, #00243a, #021c2d)" }}
       >
-        {/* Imagens */}
         <div className="shrink-0 overflow-hidden relative" style={{ width: 560, height: IMG_H + PEEK }}>
           <div ref={stripRef}>
             {IMAGES.map((src, i) => (
@@ -62,17 +78,19 @@ export default function PerformanceSection() {
                 style={{ width: 560, height: IMG_H, marginTop: i > 0 ? GAP : 0 }}
               >
                 <Image src={src} alt="" fill unoptimized style={{ objectFit: "cover" }} />
-                {i !== activeIdx && (
-                  <div className="absolute inset-x-0 bottom-0 pointer-events-none"
-                    style={{ height: 120, background: "linear-gradient(to top, #00243a, transparent)" }}
-                  />
-                )}
+                <div
+                  className="absolute inset-x-0 bottom-0 pointer-events-none transition-opacity duration-500"
+                  style={{
+                    height: 120,
+                    background: "linear-gradient(to top, #00243a, transparent)",
+                    opacity: i !== activeIdx ? 1 : 0,
+                  }}
+                />
               </div>
             ))}
           </div>
         </div>
 
-        {/* Texto */}
         <div className="flex flex-col gap-9 flex-1 max-w-[480px]">
           <h2 className="font-bold uppercase leading-[1.1]" style={{ fontSize: "clamp(28px, 2.8vw, 44px)" }}>
             UM HUB PAUTADO EM<br />PERFORMANCE E<br />RESULTADOS

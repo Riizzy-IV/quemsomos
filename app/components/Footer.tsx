@@ -54,7 +54,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4 lg:gap-7">
             <div className="flex items-center gap-2">
               <Image src={ISOLATION} alt="" width={16} height={16} unoptimized />
-              <span className="font-[family-name:var(--font-manrope)] text-base lg:text-xl leading-relaxed text-sec-lighter">
+              <span className="font-body text-base lg:text-xl leading-relaxed text-sec-lighter">
                 Nossa missão é clara: substituir o improviso por inteligência aplicada
               </span>
             </div>
@@ -64,15 +64,15 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap gap-3 lg:gap-6 items-center">
-            <Link href="https://instagram.com" target="_blank" className="flex items-center gap-2 px-3 py-2 lg:px-[10px] lg:py-[10px] border border-primary rounded-[16px] text-white font-[family-name:var(--font-manrope)] text-sm lg:text-base no-underline">
+            <Link href="https://instagram.com" target="_blank" className="flex items-center gap-2 px-3 py-2 lg:px-[10px] lg:py-[10px] border border-primary rounded-[16px] text-white font-body text-sm lg:text-base no-underline">
               <Image src={INSTAGRAM} alt="Instagram" width={20} height={20} unoptimized />
               @balzani.company
             </Link>
-            <Link href="https://linkedin.com" target="_blank" className="flex items-center gap-2 px-3 py-2 lg:px-[10px] lg:py-[10px] border border-primary rounded-[16px] text-white font-[family-name:var(--font-manrope)] text-sm lg:text-base no-underline">
+            <Link href="https://linkedin.com" target="_blank" className="flex items-center gap-2 px-3 py-2 lg:px-[10px] lg:py-[10px] border border-primary rounded-[16px] text-white font-body text-sm lg:text-base no-underline">
               <Image src={LINKEDIN} alt="LinkedIn" width={20} height={20} unoptimized />
               company/balzani
             </Link>
-            <Link href="https://wa.me" target="_blank" className="flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-[10px] bg-primary border border-primary rounded-[16px] text-white font-[family-name:var(--font-manrope)] text-sm lg:text-base no-underline">
+            <Link href="https://wa.me" target="_blank" className="flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-[10px] bg-primary border border-primary rounded-[16px] text-white font-body text-sm lg:text-base no-underline">
               <Image src={WHATSAPP} alt="WhatsApp" width={20} height={20} unoptimized />
               entre em contato
             </Link>

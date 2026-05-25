@@ -14,17 +14,16 @@ export default function SmoothScroll() {
       gestureOrientation: "vertical",
       smoothWheel: true,
       wheelMultiplier: 1,
-      smoothTouch: false,
       touchMultiplier: 2,
       infinite: false,
     });
 
+    let id: number;
     function raf(time: number) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      id = requestAnimationFrame(raf);
     }
-
-    const id = requestAnimationFrame(raf);
+    id = requestAnimationFrame(raf);
 
     return () => {
       cancelAnimationFrame(id);

@@ -20,6 +20,20 @@
 
 * { box-sizing: border-box; }
 
+.px-site { padding-left: 1.5rem; padding-right: 1.5rem; }
+.mx-site { margin-left: 1.5rem; margin-right: 1.5rem; }
+@media (min-width: 1024px) {
+  .px-site { padding-left: 120px; padding-right: 120px; }
+  .mx-site { margin-left: 120px; margin-right: 120px; }
+}
+
+.text-gradient-stat {
+  background: linear-gradient(to bottom, #fff, #2f79a8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .values-section {
   display: flex;
   flex-direction: column;
