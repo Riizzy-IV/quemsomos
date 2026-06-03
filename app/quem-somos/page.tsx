@@ -72,12 +72,7 @@ export default function QuemSomos() {
               NÃO SOMOS APENAS MAIS UMA AGÊNCIA
             </p>
             <h1 className="font-normal text-[clamp(36px,4.8vw,72px)] leading-[1.05] uppercase">
-              SOMOS O{" "}
-              <strong className="font-bold text-primary">MAIOR HUB</strong>
-              <br />
-              DE SOLUÇÕES PARA O{" "}
-              <strong className="font-bold text-primary">MERCADO IMOBILIÁRIO</strong>
-              {" "}DO BRASIL
+              SOMOS O <strong className="font-bold text-primary">MAIOR HUB</strong> DE SOLUÇÕES PARA O <strong className="font-bold text-primary">MERCADO IMOBILIÁRIO</strong> DO BRASIL
             </h1>
           </div>
 
