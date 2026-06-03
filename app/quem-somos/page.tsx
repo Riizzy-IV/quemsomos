@@ -9,7 +9,7 @@ const PURPOSE_ICON = "/assets/purpose-icon.svg";
 
 const TEAM: { img: string; name: string; role: string }[] = [
   { img: "/assets/team-guilherme.jpg", name: "Guilherme Zimerman", role: "CEO & Founder" },
-  { img: "/assets/team-enzo.jpg",      name: "Enzo Mirizi",        role: "COO & Founder" },
+  { img: "/assets/team-enzo.jpg",      name: "Enzo Mirizzi",       role: "COO & Founder" },
   { img: "/assets/team-matheus.jpg",   name: "Matheus Dreher",     role: "Gerente de Performance" },
   { img: "/assets/team-rafael.jpg",    name: "Rafael Games",       role: "Gerente de Design" },
   { img: "/assets/team-duduh.jpg",     name: "Duduh Gouveia",      role: "Coordenador Comercial" },
@@ -17,17 +17,17 @@ const TEAM: { img: string; name: string; role: string }[] = [
 ];
 
 const VALUES = [
-  { n: "01/", title: "Inconformismo" },
-  { n: "02/", title: "Disciplina\ne Consistência" },
-  { n: "03/", title: "Resolvemos\nProblemas" },
-  { n: "04/", title: "Protagonismo" },
-  { n: "05/", title: "Meritocracia" },
-  { n: "06/", title: "Verdade\nAbsoluta" },
-  { n: "07/", title: "Mentalidade\nde Dono" },
-  { n: "08/", title: "Trabalho\nDuro" },
-  { n: "09/", title: "Não\nReclamamos" },
-  { n: "10/", title: "Compromisso\ncom Resultado" },
-  { n: "11/", title: "Longo Prazo" },
+  { n: "01/", title: "Inconformismo",              desc: "Crescer não é desejo, é obrigação. Temos fome de crescimento e somos inconformados com nosso resultado atual. Buscamos conhecimento e melhoria contínua todos os dias." },
+  { n: "02/", title: "Disciplina\ne Consistência", desc: "O básico bem-feito diariamente vale mais do que um mês de sorte. Processo é sagrado — quem segue o método, vence. Disciplina é o que diferencia profissionais de amadores." },
+  { n: "03/", title: "Resolvemos\nProblemas",      desc: "Trazemos problemas acompanhados de solução. Não falamos 'não sei', falamos 'vou descobrir'. Não travamos, não empurramos, não procrastinamos." },
+  { n: "04/", title: "Protagonismo",               desc: "Assumimos culpa e consequência. Não existe 'a culpa é do cliente'. Se algo deu errado, ajustamos o processo e melhoramos. Feedback não dói, desenvolve." },
+  { n: "05/", title: "Meritocracia",               desc: "Aqui ninguém cresce por tempo de casa, cresce por resultado. Mérito fala mais alto que amizade ou preferência. Quem entrega mais, ganha mais." },
+  { n: "06/", title: "Verdade\nAbsoluta",          desc: "Aqui a verdade é inegociável — preferimos o duro ao confortável. Não existe jeitinho: existe caráter, transparência e correção. Fazemos o certo, mesmo quando ninguém está olhando." },
+  { n: "07/", title: "Mentalidade\nde Dono",       desc: "Tratamos cada cliente e entrega como se fosse nossa. Não esperamos ordem: antecipamos e resolvemos. Dono não dá desculpa, dono assume a bronca." },
+  { n: "08/", title: "Trabalho\nDuro",             desc: "Fazer o mínimo não existe aqui. Damos o sangue pelo que precisa ser feito. Acreditamos que trabalho duro sempre vence o talento relaxado." },
+  { n: "09/", title: "Não\nReclamamos",            desc: "Reclamação é comportamento de criança mimada — aqui não existe vitimismo ou lamúria. Criança chora, adulto resolve. Energia é usada para agir, não para reclamar." },
+  { n: "10/", title: "Intensidade\ne Cobrança",    desc: "Aqui a régua é alta — e continua subindo. Pressão não nos quebra, nos molda. Entregamos rápido e com qualidade. Só fica quem aguenta o ritmo e ama jogar o jogo." },
+  { n: "11/", title: "Longo Prazo",                desc: "Não buscamos atalhos: construímos algo grande, sólido e duradouro. Somos pacientes na construção e agressivos na execução. Tomamos decisões que fortalecem a Balzani para os próximos anos, não só para o próximo mês." },
 ];
 
 const PURPOSE_COLS = [
@@ -37,10 +37,10 @@ const PURPOSE_COLS = [
 ];
 
 const NUMBERS = [
-  { pre: "",          val: "+1.1BI", sub: "Gerados para nossos clientes" },
-  { pre: "",          val: "+1800",  sub: "Unidades vendidas" },
-  { pre: "",          val: "+40",    sub: "Lançamentos feitos" },
-  { pre: "em apenas", val: "5 anos", sub: "de existência" },
+  { pre: "",          val: "R$3.1BI", sub: "Gerados para nossos clientes" },
+  { pre: "",          val: "+3.600",  sub: "Unidades vendidas" },
+  { pre: "",          val: "+70",     sub: "Lançamentos imobiliários de sucesso" },
+  { pre: "em apenas", val: "6 anos",  sub: "de existência" },
 ];
 
 const PHOTO_BG = ["#d9d9d9", "#f3f3f3", "#d9d9d9"];
@@ -73,18 +73,18 @@ export default function QuemSomos() {
             </p>
             <h1 className="font-normal text-[clamp(36px,4.8vw,72px)] leading-[1.05] uppercase">
               SOMOS O{" "}
-              <strong className="font-bold text-primary">
-                MAIOR HUB<br />DE SOLUÇÕES PARA O MERCADO IMOBILIÁRIO
-              </strong>
+              <strong className="font-bold text-primary">MAIOR HUB</strong>
+              <br />
+              DE SOLUÇÕES PARA O{" "}
+              <strong className="font-bold text-primary">MERCADO IMOBILIÁRIO</strong>
+              {" "}DO BRASIL
             </h1>
           </div>
 
           <div className="flex flex-col justify-end gap-3 mt-8 lg:mt-0">
             <BlueBar />
             <p className="font-medium text-base lg:text-xl leading-relaxed">
-              Somos especialistas em lançamentos imobiliários. Com foco total em performance, nosso
-              objetivo é maximizar os resultados do seu empreendimento, garantindo que ele seja visto
-              pela pessoa certa, na hora certa.
+              Somos especializada em lançamentos e aceleração de vendas imobiliárias, unindo estratégia, marketing, processos comerciais e inteligência de dados para aumentar a performance de incorporadoras, loteadoras e imobiliárias.
             </p>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function QuemSomos() {
               key={v.n}
               className={`values-item py-6 lg:py-8 ${i < VALUES.length - 1 ? "border-b border-white/10" : ""}`}
             >
-              <div className="flex flex-col overflow-hidden">
+              <div className="flex flex-col">
                 <span
                   className="font-extrabold text-[60px] lg:text-[100px] leading-[1] tracking-[-2.5px]"
                   style={{
@@ -120,12 +120,12 @@ export default function QuemSomos() {
                 >
                   {v.n}
                 </span>
-                <h3 className="font-bold text-lg lg:text-[24px] leading-snug tracking-[-0.5px] text-white whitespace-pre-line -mt-8">
+                <h3 className="font-bold text-lg lg:text-[24px] leading-snug tracking-[-0.5px] text-white whitespace-pre-line -mt-3 lg:-mt-8">
                   {v.title}
                 </h3>
               </div>
               <p className="font-body text-sm lg:text-base leading-relaxed min-w-0">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dignissim pretium blandit. Proin quis sem eleifend, consectetur turpis in, consectetur elit. Proin eu ullamcorper diam.
+                {v.desc}
               </p>
             </div>
           ))}
@@ -196,12 +196,11 @@ export default function QuemSomos() {
         <div className="flex flex-col gap-6 lg:gap-10 mb-8 lg:mb-0">
           <SectionBadge variant="outline">NOSSAS LIDERANÇAS</SectionBadge>
           <h2 className="font-bold text-[clamp(28px,3vw,40px)] leading-[1.3] tracking-[-1.2px] max-w-[455px]">
-            Quem está por trás das estratégias mais eficazes do mercado
+            Quem está por trás das estratégias <span className="text-primary">mais eficazes</span> do mercado
           </h2>
         </div>
         <p className="font-body text-sm lg:text-base leading-relaxed max-w-[571px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dignissim pretium blandit.
-          Proin quis sem eleifend, consectetur turpis in, consectetur elit. Proin eu ullamcorper diam.
+          Nosso time reúne profissionais especializados em marketing imobiliário, estratégia comercial e inteligência de mercado, combinando criatividade, tecnologia e análise de dados para desenvolver operações que vendem mais, com mais previsibilidade e eficiência.
         </p>
       </section>
 
