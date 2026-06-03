@@ -5,7 +5,7 @@ import BlueBar from "@/app/components/BlueBar";
 import SectionBadge from "@/app/components/SectionBadge";
 import PerformanceSection from "@/app/components/PerformanceSection";
 
-const PURPOSE_ICON = "/assets/purpose-icon.png";
+const PURPOSE_ICON = "/assets/purpose-icon.svg";
 
 const TEAM: { img: string; name: string; role: string }[] = [
   { img: "/assets/team-guilherme.jpg", name: "Guilherme Zimerman", role: "CEO & Founder" },

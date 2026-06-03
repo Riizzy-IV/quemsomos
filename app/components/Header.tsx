@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const LOGO      = "/assets/logo.png";
-const HAMBURGER = "/assets/hamburger.png";
-const ARROW     = "/assets/arrow.png";
+const LOGO      = "/assets/logo.svg";
+const HAMBURGER = "/assets/hamburger.svg";
+const ARROW     = "/assets/arrow.svg";
 
 const NAV_LINKS = [
   { label: "Quem somos", href: "/quem-somos" },

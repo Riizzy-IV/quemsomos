@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const ISOLATION  = "/assets/isolation.png";
-const INSTAGRAM  = "/assets/instagram.png";
-const LINKEDIN   = "/assets/linkedin.png";
-const WHATSAPP   = "/assets/whatsapp.png";
-const MAP_PIN    = "/assets/map-pin.png";
-const BELL       = "/assets/bell.png";
-const SUBMIT_BTN = "/assets/submit-btn.png";
+const ISOLATION  = "/assets/isolation.svg";
+const INSTAGRAM  = "/assets/instagram.svg";
+const LINKEDIN   = "/assets/linkedin.svg";
+const WHATSAPP   = "/assets/whatsapp.svg";
+const MAP_PIN    = "/assets/map-pin.svg";
+const BELL       = "/assets/bell.svg";
+const SUBMIT_BTN = "/assets/submit-btn.svg";
 
 const navLinks = ["Home", "Quem somos", "Serviços", "Cases", "Clientes", "Contato"];
 
