@@ -5,9 +5,9 @@ import Image from "next/image";
 import BlueBar from "@/app/components/BlueBar";
 
 const IMAGES = [
-  "https://www.figma.com/api/mcp/asset/e232fd6d-7012-4b8c-badf-f67251e0ddfb",
-  "https://www.figma.com/api/mcp/asset/6f0fd642-95c2-4d38-ac89-da3eb2b88cce",
-  "https://www.figma.com/api/mcp/asset/ca2dab62-78b6-4cc3-ba1b-218dc5681755",
+  "/assets/perf-1.jpg",
+  "/assets/perf-2.jpg",
+  "/assets/perf-3.jpg",
 ];
 
 const IMG_H = 400;

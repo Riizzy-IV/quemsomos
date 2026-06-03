@@ -5,15 +5,15 @@ import BlueBar from "@/app/components/BlueBar";
 import SectionBadge from "@/app/components/SectionBadge";
 import PerformanceSection from "@/app/components/PerformanceSection";
 
-const PURPOSE_ICON = "https://www.figma.com/api/mcp/asset/e1558ce2-5b90-4129-b967-1a06bae91555";
+const PURPOSE_ICON = "/assets/purpose-icon.png";
 
 const TEAM: { img: string; name: string; role: string }[] = [
-  { img: "https://www.figma.com/api/mcp/asset/cb7fe73f-9fa2-4d1c-b3c3-ec63277aa51e", name: "Guilherme Zimerman", role: "CEO & Founder" },
-  { img: "https://www.figma.com/api/mcp/asset/897deb92-2662-4f42-9769-0861295a9c4e", name: "Enzo Mirizi",         role: "COO & Founder" },
-  { img: "https://www.figma.com/api/mcp/asset/fcc03a83-8d1d-4ef5-b98a-abdb67fae996", name: "Matheus Dreher",      role: "Gerente de Performance" },
-  { img: "https://www.figma.com/api/mcp/asset/4c48cec3-4b3f-44bb-8dd5-7568cfad548c", name: "Rafael Games",        role: "Gerente de Design" },
-  { img: "https://www.figma.com/api/mcp/asset/5342026d-6494-4449-b2f0-ac46ab0ac93a", name: "Duduh Gouveia",       role: "Coordenador Comercial" },
-  { img: "https://www.figma.com/api/mcp/asset/df053a2b-7957-4f54-9d7a-0ffa679ce873", name: "Carlos Bunicki",      role: "Founder Atta" },
+  { img: "/assets/team-guilherme.jpg", name: "Guilherme Zimerman", role: "CEO & Founder" },
+  { img: "/assets/team-enzo.jpg",      name: "Enzo Mirizi",        role: "COO & Founder" },
+  { img: "/assets/team-matheus.jpg",   name: "Matheus Dreher",     role: "Gerente de Performance" },
+  { img: "/assets/team-rafael.jpg",    name: "Rafael Games",       role: "Gerente de Design" },
+  { img: "/assets/team-duduh.jpg",     name: "Duduh Gouveia",      role: "Coordenador Comercial" },
+  { img: "/assets/team-carlos.jpg",    name: "Carlos Bunicki",     role: "Founder Atta" },
 ];
 
 const VALUES = [

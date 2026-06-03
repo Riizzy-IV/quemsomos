@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const ISOLATION  = "https://www.figma.com/api/mcp/asset/df3c5b35-db8b-4fce-9786-745505d720be";
-const INSTAGRAM  = "https://www.figma.com/api/mcp/asset/14dd38d2-2d58-41c0-9ac7-07ea944db752";
-const LINKEDIN   = "https://www.figma.com/api/mcp/asset/ce1a6d6f-522e-4e47-92ec-e4bcdee096d3";
-const WHATSAPP   = "https://www.figma.com/api/mcp/asset/820ad65a-bd70-48da-8b28-3043086dd834";
-const MAP_PIN    = "https://www.figma.com/api/mcp/asset/6389f02a-2383-4516-b86d-4156acabfb64";
-const BELL       = "https://www.figma.com/api/mcp/asset/403d834f-ddcc-453c-9dcf-4ce9e666c6c7";
-const SUBMIT_BTN = "https://www.figma.com/api/mcp/asset/41f03170-ed46-47f7-9e3a-029eeebb6e9a";
+const ISOLATION  = "/assets/isolation.png";
+const INSTAGRAM  = "/assets/instagram.png";
+const LINKEDIN   = "/assets/linkedin.png";
+const WHATSAPP   = "/assets/whatsapp.png";
+const MAP_PIN    = "/assets/map-pin.png";
+const BELL       = "/assets/bell.png";
+const SUBMIT_BTN = "/assets/submit-btn.png";
 
 const navLinks = ["Home", "Quem somos", "Serviços", "Cases", "Clientes", "Contato"];
 

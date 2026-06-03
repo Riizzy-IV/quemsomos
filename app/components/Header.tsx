@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const LOGO      = "https://www.figma.com/api/mcp/asset/151a10d5-4775-433e-9c0e-9bb9c0f583d8";
-const HAMBURGER = "https://www.figma.com/api/mcp/asset/8ffd5dc7-2794-48b7-aea4-b1556ddad8b2";
-const ARROW     = "https://www.figma.com/api/mcp/asset/2c79997a-d7b8-457c-8d6e-5cf2a10edfae";
+const LOGO      = "/assets/logo.png";
+const HAMBURGER = "/assets/hamburger.png";
+const ARROW     = "/assets/arrow.png";
 
 const NAV_LINKS = [
   { label: "Quem somos", href: "/quem-somos" },
