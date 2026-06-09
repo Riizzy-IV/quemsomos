@@ -227,8 +227,6 @@ export default function FormulaVertice() {
           </ul>
         </div>
 
-        <hr className="border-t border-white/10" />
-
         {/* Step 2 — Marketing */}
         <div className="flex flex-col gap-8 lg:gap-10">
           <p className="font-bold text-[clamp(24px,2.5vw,40px)] leading-[1.3] tracking-[-1.2px] text-white max-w-[900px] text-center mx-auto">
@@ -268,10 +266,8 @@ export default function FormulaVertice() {
           </ul>
         </div>
 
-        <hr className="border-t border-white/10" />
-
         {/* Step 4 — Dados */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 lg:gap-[168px] items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 lg:gap-[168px] items-start pt-10 lg:pt-16">
           <div className="flex flex-col gap-4">
             <p className="font-bold text-[clamp(24px,2.5vw,40px)] leading-[1.3] tracking-[-1.2px] text-white">
               E por trás de toda grande operação,{" "}
