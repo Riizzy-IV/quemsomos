@@ -160,7 +160,7 @@ export default function QuemSomos() {
                     {n.pre}
                   </p>
                 )}
-                <p className="text-gradient-stat font-bold text-[clamp(40px,5vw,80px)] leading-[1.1]">
+                <p className="text-gradient-stat font-bold text-[clamp(40px,5vw,80px)] leading-[1.1] whitespace-nowrap">
                   {n.val}
                 </p>
                 <p className="font-body text-sm lg:text-base leading-[1.3] tracking-[0.16px]">
