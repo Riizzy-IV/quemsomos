@@ -142,8 +142,8 @@ export default function PerformanceSection() {
       <div className="lg:hidden relative z-10 px-6 py-14 flex flex-col gap-10"
         style={{ background: "linear-gradient(to bottom, #00243a, #021c2d)" }}
       >
-        {textContent}
         <MobileCarousel />
+        {textContent}
       </div>
 
       {/* Desktop: sticky scroll */}

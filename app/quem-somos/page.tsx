@@ -43,8 +43,6 @@ const NUMBERS = [
   { pre: "em apenas", val: "6 anos",  sub: "de existência" },
 ];
 
-const PHOTO_BG = ["#d9d9d9", "#f3f3f3", "#d9d9d9"];
-
 export default function QuemSomos() {
   return (
     <div className="relative" style={{ overflowX: "clip" }}>
@@ -127,15 +125,7 @@ export default function QuemSomos() {
         </div>
       </section>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 mt-16 lg:mt-[100px]">
-        {PHOTO_BG.map((bg, i) => (
-          <div key={i} className="h-[300px] lg:h-[641px] flex items-center justify-center" style={{ background: bg }}>
-            <span className="font-bold text-[40px] lg:text-[60px] text-black tracking-[-1.8px]">Foto</span>
-          </div>
-        ))}
-      </div>
-
-      <section className="relative z-10 px-site pt-16 lg:pt-[100px] pb-10 lg:pb-[60px]">
+<section className="relative z-10 px-site pt-16 lg:pt-[100px] pb-10 lg:pb-[60px]">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-0">
           {PURPOSE_COLS.map((col, i) => (
             <div
