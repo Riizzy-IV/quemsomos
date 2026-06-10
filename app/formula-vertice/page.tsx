@@ -59,7 +59,7 @@ export default function FormulaVertice() {
 
         {/* Mobile: image on top */}
         <div className="lg:hidden relative w-full h-[260px]">
-          <Image src={FV_HERO} alt="" fill unoptimized style={{ objectFit: "cover", objectPosition: "center top" }} />
+          <Image src={FV_HERO} alt="" fill sizes="100vw" style={{ objectFit: "cover", objectPosition: "center top" }} />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 40%, #00243a)" }} />
         </div>
 
@@ -68,7 +68,7 @@ export default function FormulaVertice() {
 
           {/* Left: hero image (desktop only) */}
           <div className="hidden lg:block absolute left-0 top-0 h-full" style={{ width: "56%" }}>
-            <Image src={FV_HERO} alt="" fill unoptimized style={{ objectFit: "cover", objectPosition: "center top" }} />
+            <Image src={FV_HERO} alt="" fill sizes="56vw" style={{ objectFit: "cover", objectPosition: "center top" }} />
             <div className="absolute inset-0" style={{ background: "linear-gradient(to right, transparent 55%, #00243a)" }} />
           </div>
 

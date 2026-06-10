@@ -192,7 +192,7 @@ export default function QuemSomos() {
       <div className="relative z-10 flex overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-6 lg:overflow-visible">
         {TEAM.map((member) => (
           <div key={member.name} className="flex-none w-[260px] lg:w-auto h-[400px] lg:h-[480px] relative border border-[rgba(47,121,168,0.2)] overflow-hidden">
-            <Image src={member.img} alt={member.name} fill unoptimized style={{ objectFit: "cover" }} />
+            <Image src={member.img} alt={member.name} fill sizes="(max-width: 1024px) 260px, 16.66vw" style={{ objectFit: "cover" }} />
             <div
               className="absolute inset-0"
               style={{
