@@ -100,8 +100,8 @@ export default function FormulaVertice() {
                 ].map(({ label, lgMl }) => (
                   <div
                     key={label}
-                    className={`flex items-center justify-center gap-4 px-6 py-4 lg:py-5 rounded-xl ${lgMl}`}
-                    style={{ background: "#afd2df", width: 330 }}
+                    className={`flex items-center justify-center gap-4 px-6 py-4 lg:py-5 rounded-xl w-full ${lgMl}`}
+                    style={{ background: "#afd2df", maxWidth: 330 }}
                   >
                     <Image src={FV_CHECK} alt="" width={24} height={24} unoptimized />
                     <span className="font-bold text-base lg:text-xl uppercase text-[#003556] tracking-[-0.5px]">
@@ -116,7 +116,7 @@ export default function FormulaVertice() {
       </section>
 
       {/* ── Reality check ── */}
-      <section className="relative z-10 px-site mt-20 lg:mt-[120px] flex flex-col items-center text-center gap-8">
+      <section className="relative z-10 px-site mt-4 lg:mt-[120px] flex flex-col items-center text-center gap-8">
         <p className="font-bold text-[clamp(28px,3.5vw,48px)] text-primary leading-[1.1]">
           Mas a realidade do mercado é outra.
         </p>
@@ -197,7 +197,7 @@ export default function FormulaVertice() {
             Tudo pensado para uma única coisa:
           </p>
         </div>
-        <p className="font-extrabold text-[clamp(40px,5.5vw,80px)] text-primary uppercase leading-[1.1] tracking-[-2px]">
+        <p className="font-extrabold text-[clamp(32px,8vw,80px)] text-primary uppercase leading-[1.1] tracking-[-2px]">
           Vender
           <br />
           Empreendimentos
@@ -324,10 +324,12 @@ export default function FormulaVertice() {
       </section>
 
       {/* ── Final CTA ── */}
-      <section className="relative z-10 flex flex-col items-center text-center" style={{ background: "#021c2d" }}>
+      <section className="relative z-10 flex flex-col items-center text-center">
         <div className="relative w-full flex items-center justify-center py-20 lg:py-32">
-          <p className="relative z-10 font-bold text-[clamp(20px,2vw,32px)] leading-[1.3] text-white max-w-[600px] px-site">
-            Seu próximo lançamento pode seguir dois caminhos:
+          <p className="relative z-10 font-bold text-[clamp(22px,3.5vw,48px)] leading-[1.3] text-white max-w-[340px] lg:max-w-[700px] px-site">
+            Seu próximo lançamento pode seguir
+            <br />
+            dois caminhos:
           </p>
         </div>
 
