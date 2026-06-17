@@ -325,17 +325,7 @@ export default function FormulaVertice() {
 
       {/* ── Final CTA ── */}
       <section className="relative z-10 flex flex-col items-center text-center" style={{ background: "#021c2d" }}>
-        <div className="relative w-full flex items-center justify-center" style={{ aspectRatio: "1920/906" }}>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-            style={{ mixBlendMode: "screen" }}
-          >
-            <source src="/assets/fractal glass shapes.mp4" type="video/mp4" />
-          </video>
+        <div className="relative w-full flex items-center justify-center py-20 lg:py-32">
           <p className="relative z-10 font-bold text-[clamp(20px,2vw,32px)] leading-[1.3] text-white max-w-[600px] px-site">
             Seu próximo lançamento pode seguir dois caminhos:
           </p>
