@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { createPortal } from "react-dom";
 
 const WEBHOOK_URL = "https://hook.us1.make.com/gp8peabjb51kq0obkpxq84ytu0nu2syl";
 
@@ -19,7 +20,7 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
   });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  if (!open) return null;
+  if (!open || typeof document === "undefined") return null;
 
   const update = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
     setForm((f) => ({ ...f, [field]: e.target.value }));
@@ -39,7 +40,7 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
     }
   };
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[200] flex items-center justify-center bg-black/70 px-4"
       onClick={onClose}
@@ -116,6 +117,7 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
           )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
