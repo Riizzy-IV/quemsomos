@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import ContactButton from "./ContactButton";
 
 const LOGO      = "/assets/logo.svg";
 const HAMBURGER = "/assets/hamburger.svg";
@@ -41,15 +42,12 @@ export default function Header() {
         </nav>
 
         {/* CTA — desktop only */}
-        <Link
-          href="#contato"
-          className="hidden lg:flex items-center gap-3 px-5 py-2 bg-primary rounded-xl text-white font-medium text-base no-underline"
-        >
+        <ContactButton className="hidden lg:flex items-center gap-3 px-5 py-2 bg-primary rounded-xl text-white font-medium text-base">
           <span className="flex items-center justify-center w-8 h-8 bg-sec-main rounded-[9px] p-2">
             <Image src={ARROW} alt="" width={15} height={15} unoptimized />
           </span>
           Entre em contato
-        </Link>
+        </ContactButton>
 
         {/* Hamburger — mobile only */}
         <button
@@ -98,16 +96,12 @@ export default function Header() {
 
           {/* CTA */}
           <div className="px-6 mt-8">
-            <Link
-              href="#contato"
-              onClick={() => setOpen(false)}
-              className="flex items-center justify-center gap-3 px-5 py-4 bg-primary rounded-xl text-white font-medium text-base no-underline w-full"
-            >
+            <ContactButton className="flex items-center justify-center gap-3 px-5 py-4 bg-primary rounded-xl text-white font-medium text-base w-full">
               <span className="flex items-center justify-center w-8 h-8 bg-sec-main rounded-[9px] p-2">
                 <Image src={ARROW} alt="" width={15} height={15} unoptimized />
               </span>
               Entre em contato
-            </Link>
+            </ContactButton>
           </div>
         </div>
       )}

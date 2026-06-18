@@ -3,6 +3,7 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import SectionBadge from "@/app/components/SectionBadge";
 import BlueBar from "@/app/components/BlueBar";
+import ContactButton from "@/app/components/ContactButton";
 
 const FV_LOGO = "/assets/fv-logo.svg";
 const FV_HERO = "/assets/fv-hero-real.jpg";
@@ -339,14 +340,10 @@ export default function FormulaVertice() {
             <br />
             <span className="text-[clamp(22px,2vw,40px)] text-primary">ou o próximo grande case do mercado imobiliário.</span>
           </p>
-          <a
-            href="#contato"
-            className="flex items-center gap-3 px-6 py-4 rounded-xl no-underline"
-            style={{ background: "#ff611b" }}
-          >
+          <ContactButton className="flex items-center gap-3 px-6 py-4 rounded-xl bg-[#ff611b]">
             <Image src={FV_BTN} alt="" width={32} height={32} unoptimized />
             <span className="font-medium text-base text-[#003556]">Fale com um dos nossos consultores</span>
-          </a>
+          </ContactButton>
         </div>
       </section>
 

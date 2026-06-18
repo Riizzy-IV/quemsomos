@@ -6,8 +6,6 @@ const INSTAGRAM  = "/assets/instagram.svg";
 const LINKEDIN   = "/assets/linkedin.svg";
 const WHATSAPP   = "/assets/whatsapp.svg";
 const MAP_PIN    = "/assets/map-pin.svg";
-const BELL       = "/assets/bell.svg";
-const SUBMIT_BTN = "/assets/submit-btn.svg";
 
 const navLinks = ["Home", "Quem somos", "Serviços", "Cases", "Clientes", "Contato"];
 
@@ -15,36 +13,6 @@ export default function Footer() {
   return (
     <footer id="contato" className="relative z-10 bg-bg-dark px-6 lg:px-[120px] pt-10 lg:pt-[60px] pb-12 lg:pb-20 mt-12 lg:mt-20">
 
-      {/* ── Newsletter bar ── */}
-      <div
-        className="relative flex flex-col lg:flex-row items-stretch lg:items-center gap-4 lg:gap-[46px] rounded-[24px] px-6 lg:px-9 py-6 lg:py-[34px] mb-12 lg:mb-20 overflow-hidden"
-        style={{
-          background: "linear-gradient(to right, #b83800 31%, #ee5e1f)",
-          boxShadow: "0 20px 44px rgba(0,0,0,.25)",
-        }}
-      >
-        <div className="flex items-center gap-2 shrink-0">
-          <Image src={BELL} alt="" width={32} height={32} unoptimized />
-          <span className="font-bold text-lg lg:text-2xl leading-tight">
-            Fique por dentro das notícias
-          </span>
-        </div>
-
-        <input
-          type="text"
-          placeholder="nome"
-          className="w-full lg:flex-1 h-14 lg:h-[83px] bg-primary rounded-xl px-5 lg:px-8 text-lg lg:text-2xl text-primary-light placeholder:text-primary-light outline-none border-none"
-        />
-        <input
-          type="email"
-          placeholder="e-mail"
-          className="w-full lg:flex-1 h-14 lg:h-[83px] bg-primary rounded-xl px-5 lg:px-8 text-lg lg:text-2xl text-primary-light placeholder:text-primary-light outline-none border-none"
-        />
-        <button className="flex items-center justify-center gap-3 w-full lg:w-[229px] h-14 lg:h-[83px] bg-sec-main rounded-xl px-5 lg:px-[21px] py-[10px] border-none cursor-pointer">
-          <Image src={SUBMIT_BTN} alt="" width={36} height={36} unoptimized />
-          <span className="font-medium text-lg lg:text-[23px] text-sec-lighter">enviar</span>
-        </button>
-      </div>
 
       {/* ── Bottom ── */}
       <div className="flex flex-col lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-20 lg:items-start gap-10">
@@ -64,7 +32,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap gap-3 lg:gap-6 items-center">
-            <Link href="https://instagram.com" target="_blank" className="flex items-center gap-2 px-3 py-2 lg:px-[10px] lg:py-[10px] border border-primary rounded-[16px] text-white font-body text-sm lg:text-base no-underline">
+            <Link href="https://www.instagram.com/balzani.company/" target="_blank" className="flex items-center gap-2 px-3 py-2 lg:px-[10px] lg:py-[10px] border border-primary rounded-[16px] text-white font-body text-sm lg:text-base no-underline">
               <Image src={INSTAGRAM} alt="Instagram" width={20} height={20} unoptimized />
               @balzani.company
             </Link>
