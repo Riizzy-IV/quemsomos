@@ -28,11 +28,46 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
+
+    const params = new URLSearchParams(window.location.search);
+    const now = new Date();
+
+    let remoteIp = "";
+    try {
+      const ipRes = await fetch("https://api.ipify.org?format=json");
+      remoteIp = (await ipRes.json()).ip ?? "";
+    } catch {
+      remoteIp = "";
+    }
+
+    const payload = {
+      "Date": now.toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" }),
+      "Time": now.toLocaleTimeString("pt-BR", { hour: "numeric", minute: "2-digit" }),
+      "Nome:": form.nome,
+      "E-mail:": form.email,
+      "form_id": "site-balzani-contato",
+      "Page URL": window.location.href,
+      "utm_term": params.get("utm_term") ?? "",
+      "Remote IP": remoteIp,
+      "Telefone:": form.telefone,
+      "Você é:": form.voce_e,
+      "form_name": "Novo formulário",
+      "Powered by": "Site Balzani",
+      "User Agent": navigator.userAgent,
+      "utm_medium": params.get("utm_medium") ?? "",
+      "utm_source": params.get("utm_source") ?? "",
+      "utm_content": params.get("utm_content") ?? "",
+      "utm_campaign": params.get("utm_campaign") ?? "",
+      "Site ou instagram da empresa:": form.site,
+      "Qual VGV do seu lançamento imobiliário": form.vgv,
+      "Qual a previsão para o seu Lançamento?": form.previsao,
+    };
+
     try {
       await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       });
       setStatus("sent");
     } catch {
