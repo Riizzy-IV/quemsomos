@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContactButton from "./ContactButton";
 
 const ISOLATION  = "/assets/isolation.svg";
 const INSTAGRAM  = "/assets/instagram.svg";
@@ -40,10 +41,10 @@ export default function Footer() {
               <Image src={LINKEDIN} alt="LinkedIn" width={20} height={20} unoptimized />
               company/balzani
             </Link>
-            <Link href="https://wa.me" target="_blank" className="flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-[10px] bg-primary border border-primary rounded-[16px] text-white font-body text-sm lg:text-base no-underline">
+            <ContactButton className="flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-[10px] bg-primary border border-primary rounded-[16px] text-white font-body text-sm lg:text-base">
               <Image src={WHATSAPP} alt="WhatsApp" width={20} height={20} unoptimized />
               entre em contato
-            </Link>
+            </ContactButton>
           </div>
 
           <div className="flex items-center gap-3 lg:gap-4">
