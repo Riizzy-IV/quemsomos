@@ -8,6 +8,14 @@ const WEBHOOK_URL = "https://hook.us1.make.com/gp8peabjb51kq0obkpxq84ytu0nu2syl"
 const inputClass =
   "w-full h-12 bg-black rounded-lg px-4 text-sm text-white placeholder:text-white/40 outline-none border border-white/10 focus:border-primary";
 
+function maskPhone(value: string) {
+  const digits = value.replace(/\D/g, "").slice(0, 11);
+  if (digits.length <= 2) return digits;
+  if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+  if (digits.length <= 10) return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+}
+
 export default function ContactModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [form, setForm] = useState({
     nome: "",
@@ -110,7 +118,13 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <input required placeholder="Nome:" className={inputClass} value={form.nome} onChange={update("nome")} />
                 <input required type="email" placeholder="E-mail:" className={inputClass} value={form.email} onChange={update("email")} />
-                <input required placeholder="Telefone:" className={inputClass} value={form.telefone} onChange={update("telefone")} />
+                <input
+                  required
+                  placeholder="Telefone:"
+                  className={inputClass}
+                  value={form.telefone}
+                  onChange={(e) => setForm((f) => ({ ...f, telefone: maskPhone(e.target.value) }))}
+                />
                 <input placeholder="Site ou instagram da empresa:" className={inputClass} value={form.site} onChange={update("site")} />
 
                 <select required className={inputClass} value={form.voce_e} onChange={update("voce_e")}>
