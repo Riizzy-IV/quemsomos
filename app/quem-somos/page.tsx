@@ -39,8 +39,8 @@ const PURPOSE_COLS = [
 const NUMBERS = [
   { pre: "",          val: "R$3.1BI", sub: "Gerados para nossos clientes" },
   { pre: "",          val: "+3.600",  sub: "Unidades vendidas" },
-  { pre: "",          val: "+70",     sub: "Lançamentos imobiliários de sucesso" },
-  { pre: "em apenas", val: "6 anos",  sub: "de existência" },
+  { pre: "",          val: "+70",     sub: "Lançamentos" },
+  { pre: "",          val: "6 anos",  sub: "de existência" },
 ];
 
 export default function QuemSomos() {
@@ -70,7 +70,7 @@ export default function QuemSomos() {
               NÃO SOMOS APENAS MAIS UMA AGÊNCIA
             </p>
             <h1 className="font-normal text-[clamp(36px,4.8vw,72px)] leading-[1.05] uppercase">
-              SOMOS O <strong className="font-bold text-primary">MAIOR HUB</strong> DE SOLUÇÕES PARA O <strong className="font-bold text-primary">MERCADO IMOBILIÁRIO</strong> DO BRASIL
+              SOMOS O <strong className="font-bold text-primary">MAIOR HUB</strong> DE<br className="hidden lg:block" /> SOLUÇÕES PARA O<br className="hidden lg:block" /> <strong className="font-bold text-primary">MERCADO IMOBILIÁRIO</strong> DO BRASIL
             </h1>
           </div>
 

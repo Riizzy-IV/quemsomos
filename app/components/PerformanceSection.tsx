@@ -10,7 +10,7 @@ const IMAGES = [
   "/assets/perf-3.jpg",
 ];
 
-const IMG_H = 400;
+const IMG_H = 460;
 const GAP   = 16;
 const PEEK  = 140;
 const LERP  = 0.07;
@@ -109,7 +109,7 @@ export default function PerformanceSection() {
   const wrapperH = `calc(100vh + ${(IMAGES.length - 1) * (IMG_H + GAP)}px)`;
 
   const textContent = (
-    <div className="flex flex-col gap-9 flex-1 max-w-[480px]">
+    <div className="flex flex-col gap-9 flex-1 max-w-none lg:max-w-[760px]">
       <h2 className="font-bold uppercase leading-[1.1]" style={{ fontSize: "clamp(28px, 2.8vw, 44px)", textWrap: "balance" }}>
         SOMOS UM PARCEIRO ESTRATÉGICO PARA SEU EMPREENDIMENTO
       </h2>
@@ -152,11 +152,11 @@ export default function PerformanceSection() {
           className="sticky top-0 h-screen flex items-center px-[120px] gap-20 overflow-hidden"
           style={{ background: "linear-gradient(to bottom, #00243a, #021c2d)" }}
         >
-          <div className="shrink-0 overflow-hidden relative" style={{ width: 560, height: IMG_H + PEEK }}>
+          <div className="shrink-0 overflow-hidden relative" style={{ width: 820, height: IMG_H + PEEK }}>
             <div ref={stripRef}>
               {IMAGES.map((src, i) => (
                 <div key={i} className="relative rounded-xl overflow-hidden"
-                  style={{ width: 560, height: IMG_H, marginTop: i > 0 ? GAP : 0 }}
+                  style={{ width: 820, height: IMG_H, marginTop: i > 0 ? GAP : 0 }}
                 >
                   <Image src={src} alt="" fill unoptimized style={{ objectFit: "cover" }} />
                   <div

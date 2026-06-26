@@ -8,7 +8,14 @@ const LINKEDIN   = "/assets/linkedin.svg";
 const WHATSAPP   = "/assets/whatsapp.svg";
 const MAP_PIN    = "/assets/map-pin.svg";
 
-const navLinks = ["Home", "Quem somos", "Serviços", "Cases", "Clientes", "Contato"];
+const navLinks = [
+  { label: "Home",       href: "/" },
+  { label: "Quem somos", href: "/quem-somos" },
+  { label: "Serviços",   href: "https://balzani.com.br/#servicos" },
+  { label: "Cases",      href: "https://balzani.com.br/#cases" },
+  { label: "Clientes",   href: "https://balzani.com.br/#clientes" },
+  { label: "Contato",    href: "#contato" },
+];
 
 export default function Footer() {
   return (
@@ -62,14 +69,14 @@ export default function Footer() {
         <nav className="flex flex-col border-t lg:border-t-0 border-white/10 pt-8 lg:pt-5">
           {navLinks.map((item, i) => (
             <Link
-              key={item}
-              href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+              key={item.label}
+              href={item.href}
               className={`flex items-center gap-2.5 py-3 lg:py-3.5 text-lg lg:text-2xl font-medium text-white no-underline ${
                 i < navLinks.length - 1 ? "border-b border-white/10" : ""
               }`}
             >
               <span className="w-[7px] h-[7px] rounded-full bg-primary shrink-0" />
-              {item}
+              {item.label}
             </Link>
           ))}
         </nav>

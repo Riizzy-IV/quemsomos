@@ -11,9 +11,9 @@ const ARROW     = "/assets/arrow.svg";
 
 const NAV_LINKS = [
   { label: "Quem somos", href: "/quem-somos" },
-  { label: "Serviços",   href: "/servicos" },
-  { label: "Cases",      href: "/cases" },
-  { label: "Clientes",   href: "/clientes" },
+  { label: "Serviços",   href: "https://balzani.com.br/#servicos" },
+  { label: "Cases",      href: "https://balzani.com.br/#cases" },
+  { label: "Clientes",   href: "https://balzani.com.br/#clientes" },
   { label: "Contato",    href: "#contato" },
 ];
 
