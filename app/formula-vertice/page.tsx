@@ -59,20 +59,19 @@ export default function FormulaVertice() {
 
         {/* Mobile: video on top */}
         <div className="lg:hidden relative w-full h-[260px] overflow-hidden">
-          <iframe
-            src="https://www.youtube.com/embed/lRkI6iYmSS8?autoplay=1&mute=1&loop=1&playlist=lRkI6iYmSS8&controls=0&showinfo=0&rel=0&modestbranding=1"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
+          <video
+            src="/assets/fv-hero.mp4"
+            autoPlay muted loop playsInline
             style={{
               position: "absolute",
               top: "50%", left: "50%",
               transform: "translate(-50%, -50%)",
-              width: "178%", height: "100%",
-              border: "none",
-              pointerEvents: "none",
+              minWidth: "100%", minHeight: "100%",
+              width: "auto", height: "auto",
+              objectFit: "cover",
             }}
           />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 40%, #00243a)" }} />
+          <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to bottom, transparent 40%, #00243a)" }} />
         </div>
 
         {/* Desktop: video left, content right — absolute layout */}
@@ -80,20 +79,19 @@ export default function FormulaVertice() {
 
           {/* Left: hero video (desktop only) */}
           <div className="hidden lg:block absolute left-0 top-0 h-full overflow-hidden" style={{ width: "56%" }}>
-            <iframe
-              src="https://www.youtube.com/embed/lRkI6iYmSS8?autoplay=1&mute=1&loop=1&playlist=lRkI6iYmSS8&controls=0&showinfo=0&rel=0&modestbranding=1"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
+            <video
+              src="/assets/fv-hero.mp4"
+              controls playsInline
               style={{
                 position: "absolute",
                 top: "50%", left: "50%",
                 transform: "translate(-50%, -50%)",
-                width: "100%", height: "178%",
-                border: "none",
-                pointerEvents: "none",
+                minWidth: "100%", minHeight: "100%",
+                width: "auto", height: "auto",
+                objectFit: "cover",
               }}
             />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, transparent 55%, #00243a)" }} />
+            <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to right, transparent 55%, #00243a)" }} />
           </div>
 
           {/* Right: text + cards */}
