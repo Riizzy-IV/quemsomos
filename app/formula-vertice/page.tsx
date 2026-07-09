@@ -6,7 +6,6 @@ import BlueBar from "@/app/components/BlueBar";
 import ContactButton from "@/app/components/ContactButton";
 
 const FV_LOGO = "/assets/fv-logo.svg";
-const FV_HERO = "/assets/fv-hero-real.jpg";
 const FV_COMM = "/assets/fv-commercial.svg";
 const FV_CHECK = "/assets/fv-check.svg";
 const FV_BTN = "/assets/fv-cta-btn.svg";
@@ -58,18 +57,42 @@ export default function FormulaVertice() {
           <SectionBadge>FÓRMULA VÉRTICE</SectionBadge>
         </div>
 
-        {/* Mobile: image on top */}
-        <div className="lg:hidden relative w-full h-[260px]">
-          <Image src={FV_HERO} alt="" fill sizes="100vw" style={{ objectFit: "cover", objectPosition: "center top" }} />
+        {/* Mobile: video on top */}
+        <div className="lg:hidden relative w-full h-[260px] overflow-hidden">
+          <iframe
+            src="https://www.youtube.com/embed/lRkI6iYmSS8?autoplay=1&mute=1&loop=1&playlist=lRkI6iYmSS8&controls=0&showinfo=0&rel=0&modestbranding=1"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            style={{
+              position: "absolute",
+              top: "50%", left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "178%", height: "100%",
+              border: "none",
+              pointerEvents: "none",
+            }}
+          />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 40%, #00243a)" }} />
         </div>
 
-        {/* Desktop: image left, content right — absolute layout */}
+        {/* Desktop: video left, content right — absolute layout */}
         <div className="relative lg:min-h-[620px]">
 
-          {/* Left: hero image (desktop only) */}
-          <div className="hidden lg:block absolute left-0 top-0 h-full" style={{ width: "56%" }}>
-            <Image src={FV_HERO} alt="" fill sizes="56vw" style={{ objectFit: "cover", objectPosition: "center top" }} />
+          {/* Left: hero video (desktop only) */}
+          <div className="hidden lg:block absolute left-0 top-0 h-full overflow-hidden" style={{ width: "56%" }}>
+            <iframe
+              src="https://www.youtube.com/embed/lRkI6iYmSS8?autoplay=1&mute=1&loop=1&playlist=lRkI6iYmSS8&controls=0&showinfo=0&rel=0&modestbranding=1"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: "50%", left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "100%", height: "178%",
+                border: "none",
+                pointerEvents: "none",
+              }}
+            />
             <div className="absolute inset-0" style={{ background: "linear-gradient(to right, transparent 55%, #00243a)" }} />
           </div>
 
