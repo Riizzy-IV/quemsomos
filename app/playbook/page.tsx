@@ -233,7 +233,7 @@ export default function Playbook() {
             <Link href="https://www.instagram.com/balzani.company/" target="_blank">
               <Image src={INSTAGRAM} alt="Instagram" width={24} height={24} unoptimized />
             </Link>
-            <Link href="https://linkedin.com" target="_blank">
+            <Link href="https://br.linkedin.com/company/balzani" target="_blank">
               <Image src={LINKEDIN} alt="LinkedIn" width={24} height={24} unoptimized />
             </Link>
           </div>

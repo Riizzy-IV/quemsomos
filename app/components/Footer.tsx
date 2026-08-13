@@ -44,7 +44,7 @@ export default function Footer() {
               <Image src={INSTAGRAM} alt="Instagram" width={20} height={20} unoptimized />
               @balzani.company
             </Link>
-            <Link href="https://linkedin.com" target="_blank" className="flex items-center gap-2 px-3 py-2 lg:px-[10px] lg:py-[10px] border border-primary rounded-[16px] text-white font-body text-sm lg:text-base no-underline">
+            <Link href="https://br.linkedin.com/company/balzani" target="_blank" className="flex items-center gap-2 px-3 py-2 lg:px-[10px] lg:py-[10px] border border-primary rounded-[16px] text-white font-body text-sm lg:text-base no-underline">
               <Image src={LINKEDIN} alt="LinkedIn" width={20} height={20} unoptimized />
               company/balzani
             </Link>
